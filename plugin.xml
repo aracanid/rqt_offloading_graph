@@ -1,0 +1,17 @@
+<library path="src">
+  <class name="rqt_offloading_graph" type="offloading_graph.OffloadingGraph" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      A Python GUI plugin to visualize a the offloading of nodes.
+    </description>
+    <qtgui>
+      <group>
+        <label>OffloadingGUI</label>
+        <icon type="theme">folder</icon>
+        <statustip>Plugins related offloadable face recognition.</statustip>
+      </group>
+      <label>Offloading Graph</label>
+      <icon type="theme">preferences-system-network</icon>
+      <statustip> A Python GUI plugin to visualize a the offloading of nodes.</statustip>
+    </qtgui>
+  </class>
+</library>

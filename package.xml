@@ -1,0 +1,32 @@
+<package>
+  <name>rqt_offloading_graph</name>
+  <version>0.0.0</version>
+  <description>rrqt_offloading_graph provides a GUI plugin for visualizing offloading of nodes.<br /> 
+  </description>
+  <maintainer email="jmcmanus1992@gmail.com">Justin McManus</maintainer>
+
+  <license>BSD</license>
+
+  <author>Dirk Thomas</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>python-rospkg</run_depend>
+  <run_depend>qt_dotgraph</run_depend>
+  <run_depend>rosgraph</run_depend>
+  <run_depend>rosgraph_msgs</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>rosnode</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>rosservice</run_depend>
+  <run_depend>rostopic</run_depend>
+  <run_depend>rqt_gui</run_depend>
+  <run_depend>rqt_gui_py</run_depend>
+  <run_depend>offloadable_face_recognition</run_depend>
+
+  <export>
+    <architecture_independent/>
+    <rqt_gui plugin="${prefix}/plugin.xml"/>
+  </export>
+</package>
+
