@@ -180,19 +180,6 @@ class OffloadingGraph(Plugin):
 
 		context.add_widget(self._widget)
 
-		self.queue_size = 1
-		self.refresh_thread = threading.Thread(target = self.scheduler_thread)
-		self.refresh_thread.start()
-
-	def scheduler_thread(self):
-
-		scheduler_sub = rospy.Subscriber("scheduler_commands", SchedulerCommand, self.scheduler_listener, queue_size=self.queue_size)
-		rospy.spin()
-
-	def scheduler_listener(self, scheduler_command):
-		print "refreshing graph"
-		self._refresh_rosgraph()
-
 	def save_settings(self, plugin_settings, instance_settings):
 		instance_settings.set_value('graph_type_combo_box_index', self._widget.graph_type_combo_box.currentIndex())
 		instance_settings.set_value('filter_line_edit_text', self._widget.filter_line_edit.text())
